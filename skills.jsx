@@ -121,7 +121,7 @@ const BallCanvas = ({ icon }) => {
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls enableZoom={false} />
-        <Ball imgUrl={`./tech/${icon}.png`} />
+        <Ball imgUrl={`/tech/${icon}.png`} />
       </Suspense>
 
       <Preload all />
