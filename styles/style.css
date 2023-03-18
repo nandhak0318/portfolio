@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html{scroll-behavior:smooth}
+:root {
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+section{
+  margin-bottom: .3em;
+}
+
+/* canvas {
+  width: 100vw;
+  height: 100vh;
+} */
+
+#bg{ 
+  position: absolute;
+  z-index: 0;
+}
+
+#hero{
+  position: relative;
+  height: 100vh;
+}
+
+#scene{
+  position: absolute;
+  top:30px;
+}
+
+#about{
+  color: white;
+  position: relative;
+  height: 30vh;
+  display: flex;
+  text-align: left;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 140px;
+}
+#skills{
+color: white;
+  position: relative;
+  display: flex;
+  text-align: left;
+  justify-content: center;
+  align-items: center;
+  font-size: 140px;
+}
+#about p{
+  font-size: 30px;
+  margin-right: 3em;
+  padding:2em;
+  width:800px;
+  z-index: 10;
+}
+.skill-sec{
+  position: relative;
+  z-index: 10;
+  padding:0 1em 0 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  flex-direction: row;
+}
+#skills .head{
+   transition: transform 0.5s ease-out;
+  position: absolute;
+  color: #eaeaea;
+  opacity: 60%;
+  top:-15%;
+  font-weight: bold;
+  right:-10%;
+  z-index: 2;
+  /* @media ${device.laptop} {
+    font-size: 180px;
+  }
+  @media ${device.laptopL} {
+    font-size: 200px;
+  }
+  @media ${device.desktop} {
+    font-size: 350px;
+  } */
+}
+#about .head{
+  transition: transform 0.5s ease-out;
+  position: absolute;
+  color: #eaeaea;
+  opacity: 60%;
+  top:-15%;
+  font-weight: bold;
+  left:-15%;
+  z-index: 2;
+  /* @media ${device.laptop} {
+    font-size: 180px;
+  }
+  @media ${device.laptopL} {
+    font-size: 200px;
+  }
+  @media ${device.desktop} {
+    font-size: 350px;
+  } */
+}
+
+#skills {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.w-28{
+  width: 7rem;
+}
+
+.h-28{
+  height: 7rem;
+}

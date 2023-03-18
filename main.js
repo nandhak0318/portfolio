@@ -2,6 +2,26 @@ import * as THREE from 'three'
 //Declare three.js letiables
 let camera, scene, renderer, stars = [];
 
+
+const first = document.getElementById("abouttitle");
+const second = document.getElementById("skilltittle");
+const animate = (element, position) => {
+  element.style.transform = `translateX(${position}%)`;
+}
+const animateopp = (element, position) => {
+  element.style.transform = `translateX(-${position}%)`;
+}
+window.addEventListener('scroll', function (e) {
+  let lastKnownScrollPosition = window.scrollY;
+
+  window.requestAnimationFrame(function () {
+    animate(first, lastKnownScrollPosition * .2 / 4)
+    if(window.scrollY>280){
+      animateopp(second,lastKnownScrollPosition * .2 /4 )
+    }
+  });
+}, false);
+
 //assign three.js objects to each letiable
 function init() {
 
@@ -15,10 +35,10 @@ function init() {
   //renderer
   renderer = new THREE.WebGLRenderer();
   //set the size of the renderer
-  renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.setSize(window.innerWidth, window.innerHeight * 3);
 
   //add the renderer to the html document body
-  document.body.appendChild(renderer.domElement);
+  document.getElementById('bg').appendChild(renderer.domElement);
 }
 
 
@@ -51,7 +71,6 @@ function addSphere() {
 }
 
 function animateStars() {
-
   // loop through each star
   for (let i = 0; i < stars.length; i++) {
 
@@ -74,7 +93,6 @@ function render() {
   //render the scene
   renderer.render(scene, camera);
   animateStars();
-
 }
 
 init();
