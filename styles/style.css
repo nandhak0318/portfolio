@@ -75,6 +75,7 @@ color: white;
 .skill-sec{
   position: relative;
   z-index: 10;
+  min-height: 1.7em;
   padding:0 1em 0 1em;
   display: flex;
   align-items: center;
@@ -83,25 +84,27 @@ color: white;
   gap: 20px;
   flex-direction: row;
 }
+
 #skills .head{
    transition: transform 0.5s ease-out;
   position: absolute;
   color: #eaeaea;
   opacity: 60%;
-  top:-15%;
+  top: -12px;
   font-weight: bold;
   right:-10%;
   z-index: 2;
-  /* @media ${device.laptop} {
-    font-size: 180px;
-  }
-  @media ${device.laptopL} {
-    font-size: 200px;
-  }
-  @media ${device.desktop} {
-    font-size: 350px;
-  } */
+ 
 }
+
+ @media screen and (max-width:800px){
+  #skills .head{
+    font-size: 110px;
+  }
+  #about p{
+    margin-right: 0;
+  }
+  }
 #about .head{
   transition: transform 0.5s ease-out;
   position: absolute;
@@ -121,6 +124,13 @@ color: white;
     font-size: 350px;
   } */
 }
+ @media screen and (max-width:800px){
+  #about .head{
+    font-size: 110px;
+word-wrap: normal;
+  }
+  
+  }
 
 #skills {
   position: relative;
@@ -134,4 +144,25 @@ color: white;
 
 .h-28{
   height: 7rem;
+}
+
+
+
+.gradient_text {
+  background-image: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-size: 300%;
+  animation: gradient_animation 3s infinite alternate;
+}
+
+@keyframes gradient_animation {
+  0% {
+    background-position: left;
+  }
+
+  100% {
+    background-position: right;
+  }
 }
