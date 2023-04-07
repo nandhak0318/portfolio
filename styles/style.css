@@ -51,7 +51,7 @@ section{
 }
 
 #about{
-  min-height: 412px;
+  min-height: 500px;
   color: white;
   position: relative;
   height: 30vh;
@@ -115,7 +115,7 @@ color: white;
   position: absolute;
   color: #eaeaea;
   opacity: 60%;
-  top:-15%;
+  top:15%;
   font-weight: bold;
   left:-15%;
   z-index: 2;
@@ -129,6 +129,11 @@ color: white;
     font-size: 350px;
   } */
 }
+@media screen and (max-width:800px){
+   #about .head{
+    top:15%;
+  }
+ }
  @media screen and (max-width:800px){
   #about .head{
     font-size: 110px;
