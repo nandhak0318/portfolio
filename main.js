@@ -95,6 +95,8 @@ function init() {
 
   //scene
   scene = new THREE.Scene();
+  scene.background = new THREE.Color( 0x000000 );
+
 
   //renderer
   renderer = new THREE.WebGLRenderer();
