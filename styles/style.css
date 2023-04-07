@@ -51,6 +51,7 @@ section{
 }
 
 #about{
+  min-height: 412px;
   color: white;
   position: relative;
   height: 30vh;
