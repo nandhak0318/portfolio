@@ -34,7 +34,6 @@ function scrollHandler(e) {
   const lineRect = line.getBoundingClientRect(); // const lineHeight = lineRect.bottom - lineRect.top;
 
   const dist = targetY - timelineRect.top;
-  console.log(dist);
 
   if (down && !full) {
     set = Math.max(set, dist);
@@ -100,7 +99,7 @@ function init() {
   //renderer
   renderer = new THREE.WebGLRenderer();
   //set the size of the renderer
-  renderer.setSize(window.innerWidth, window.innerHeight * 3);
+  renderer.setSize(window.innerWidth, window.innerHeight * 5);
 
   //add the renderer to the html document body
   document.getElementById('bg').appendChild(renderer.domElement);
