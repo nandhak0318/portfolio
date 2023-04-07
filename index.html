@@ -9,29 +9,79 @@
     <title>Vite App</title>
   </head>
   <body>
-    <div class="navbar backdrop-blur fixed z-10">
-  <div class="flex-1">
-    <a class="btn btn-ghost normal-case text-xl">NANDHA</a>
-  </div>
-  <div class="flex-none">
-    <ul class="menu menu-horizontal px-1">
-      <li><a href="#about">About</a></li>
-      <!-- <li tabindex="0">
-        <a>
-          Parent
-          <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
-        </a>
-        <ul class="p-2 bg-base-100">
-          <li><a>Submenu 1</a></li>
-          <li><a>Submenu 2</a></li>
-        </ul>
-      </li> -->
-      <li><a>Experience</a></li>
-      <li><a>Projects</a></li>
-      <li><a href="">Contact</a></li>
-    </ul>
-  </div>
-</div>
+    <nav
+        class="
+          flex flex-wrap
+          items-center
+          justify-between
+          w-full
+          py-4
+          md:py-0
+          text-white
+          px-4
+          text-lg
+         backdrop-blur fixed z-10
+        "
+      >
+       <div>
+         <a class="btn btn-ghost normal-case text-xl">NANDHA</a>
+        </div>
+       
+         <svg
+            xmlns="http://www.w3.org/2000/svg"
+            id="menu-button"
+            class="h-6 w-6 cursor-pointer md:hidden block"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+       
+       <div class="hidden w-full md:flex md:items-center md:w-auto" id="menu">
+          <ul
+            class="
+              pt-4
+              text-base
+              md:flex
+              md:justify-between 
+              md:pt-0"
+          >
+            <li>
+              <a class="md:p-4 py-2 block  btn-ghost " href="#"
+                >About</a
+              >
+            </li>
+            <li>
+              <a class="md:p-4 py-2 block  btn-ghost " href="#"
+                >Experience</a
+              >
+            </li>
+            <li>
+              <a class="md:p-4 py-2 block  btn-ghost " href="#"
+                >Project</a
+              >
+            </li>
+            <li>
+              <a class="md:p-4 py-2 block  btn-ghost " href="#"
+                >Contact</a
+              >
+            </li>
+            <!-- <li>
+              <a
+                class="md:p-4 py-2 block  btn-ghost "
+                href="#"
+                >Sign Up</a
+              >
+            </li> -->
+          </ul>
+        </div>
+    </nav>
     <div id="bg">
 
     </div>
